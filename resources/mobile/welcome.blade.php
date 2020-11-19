@@ -9,8 +9,8 @@
     <style>
 
         body{
-            background: #18191a;
-            color: #fff
+            background: #fff;
+            color: #000
         }
         table{
             width: 100%

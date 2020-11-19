@@ -1,5 +1,18 @@
 <?php
 
+
+use Jenssegers\Agent\Agent as Agent;
+$Agent = new Agent();
+
+if ($Agent->isMobile()) {
+    // you're a mobile device
+    $viewPath = resource_path('mobile');
+} else {
+    // you're a desktop device, or something similar
+    $viewPath = resource_path('views');
+}
+
+
 return [
 
     /*
@@ -13,9 +26,7 @@ return [
     |
     */
 
-    'paths' => [
-        resource_path('views'),
-    ],
+    'paths' => array($viewPath),
 
     /*
     |--------------------------------------------------------------------------
